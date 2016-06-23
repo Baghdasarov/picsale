@@ -1,0 +1,7 @@
+cd public
+	git clone https://github.com/twbs/bootstrap.git
+cd public/js
+	git clone https://github.com/jquery/jquery.git
+	git clone https://github.com/enyo/dropzone.git
+cd public/css
+	git clone https://github.com/FortAwesome/Font-Awesome.git
