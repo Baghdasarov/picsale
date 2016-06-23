@@ -1,0 +1,44 @@
+body{
+    padding: 0;
+    height:100%;
+    width: 100%;
+}
+/*-------Menu-----*/
+.adminMenu{
+    position:fixed;
+    overflow: hidden;
+    float: left;
+    min-height: 600px;
+    width: 14%;
+    height: 100%;
+    background: #000;
+}
+.adminMenu a{
+    text-decoration: none;
+}
+.adminMenu ul{
+    margin-top:20px;
+    padding-left: 15%;
+    list-style: none;
+}
+.adminMenu ul li{
+    padding: 20px;
+}
+.adminMenu ul li:hover{
+    background: #fff;
+    cursor: pointer;
+}
+.adminMenu .fa{
+    padding-right: 10px;
+    font-size:20px;
+}
+/* Content*/
+.adminContent{
+    float: right;
+    margin: 20px;
+    width: 80%;
+}
+#dropzonePreview{
+    display:inline-block;
+
+}
