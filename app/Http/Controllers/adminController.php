@@ -34,9 +34,39 @@ class adminController extends Controller
         return $response;
     }
     public function store(Requests\picSale $request){
-        $fileAll =  $_POST;
-        $file = $_FILES['file'];
-        dd($fileAll);
-        return "good";
+        dd($request->all());
+        if($request->file('file'))
+        {
+            $request->file('file');
+            if(is_array($request->file('file'))){
+                foreach($request->file('file') as $imgFiles){
+                    $imageName = $imgFiles->getClientOriginalName();
+                }
+            }else{
+                $imageName = $request->file('file')->getClientOriginalName();
+            }
+
+            $path = base_path() . '/public/images/uploads/';
+
+            $imgFiles->move($path , $imageName)->getRealPath();
+
+            $createFiles = $request->all();
+
+            $createFiles['file']= $imgFiles->getClientOriginalName();
+
+//            picsdata::create($createFiles);
+
+        }else{
+            $createFiles = $request->all();
+            picsdata::create($createFiles);
+        }
+        $createFiless = $request->all();
+        var_dump($createFiles);
+        dd($createFiless);
+//        dd($request->all());
+//        $fileAll =  $_POST;
+//        $file = $_FILES['file'];
+//        dd($fileAll);
+//        return "good";
     }
 }

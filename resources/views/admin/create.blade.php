@@ -12,7 +12,7 @@
     <script>
         var photo_counter = 0;
         Dropzone.options.realDropzone = {
-
+//            autoProcessQueue: false,
             uploadMultiple: true,
             parallelUploads: 100,
             maxFilesize: 2,
