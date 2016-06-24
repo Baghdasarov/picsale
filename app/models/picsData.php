@@ -11,6 +11,11 @@ class picsdata extends Model
         'name','type','price','image','about','other'
     ];
 
+    public static function createImages($image){
+        return DB::table('picsdatas')->insert(
+            ['image' => $image]
+        );
+    }
     public static function getAll(){
         return DB::table('picsdatas')->get();
     }

@@ -10,15 +10,23 @@
                 <th>картина</th>
                 <th>о картине</th>
                 <th>другое</th>
+                <th>изминить</th>
+                <th>удалить</th>
             </tr>
             @foreach($aAllDatas as $aAllData)
                 <tr>
                     <td>{{$aAllData->name}}</td>
                     <td>{{$aAllData->type}}</td>
                     <td>{{$aAllData->price}}</td>
-                    <td><img src="{{$aAllData->images}}"></td>
+                    @if($aAllData->image)
+                        <td class="imgSource"><img src="/images/uploads/{{$aAllData->image}}"></td>
+                    @else
+                        <td class="imgSource">нет картины</td>
+                    @endif
                     <td>{{$aAllData->about}}</td>
                     <td>{{$aAllData->other}}</td>
+                    <td><img src="/images/resources/edit.png"></td>
+                    <td><img src="/images/resources/delete.png"></td>
                 </tr>
             @endforeach
         </table>

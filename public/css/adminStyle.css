@@ -42,3 +42,12 @@ body{
     display:inline-block;
 
 }
+td,th{
+   text-align: center;
+}
+td img{
+   width: 30px;
+}
+.imgSource img{
+    width: 60px;
+}

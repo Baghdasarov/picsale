@@ -12,7 +12,7 @@
     <script>
         var photo_counter = 0;
         Dropzone.options.realDropzone = {
-//            autoProcessQueue: false,
+            autoProcessQueue: false,
             uploadMultiple: true,
             parallelUploads: 100,
             maxFilesize: 2,
@@ -25,6 +25,29 @@
 
           //   The setting up of the dropzone
             init:function() {
+//                var submitButton = document.querySelector("#act-on-upload")
+//                submitButton.addEventListener("click", function() {
+//                    var token = $('input[name="_token"]').val();
+//                    var type = $("select[name='type']").val();
+//                    var namePic = $("input[name='namePic']").val();
+//                    var price = $("input[name='price']").val();
+//                    var imageName = $("input[name='file']").val();
+//
+//                    var datas= [token,type,namePic,price,imageName];
+//                    console.log(datas);
+//                    $.ajax({
+//                        type: 'POST',
+//                        url: '/admin',
+//                        data: {_token:token,datas: datas},
+//                        dataType: 'html',
+//                        success: function(result){
+//
+//                            alert("goodmorning");
+//
+//                        }
+//                    });
+//                });
+
                 this.on("removedfile", function(file) {
                     var token = $('input[name="_token"]').val();
                     $.ajax({
