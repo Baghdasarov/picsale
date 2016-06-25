@@ -19,19 +19,60 @@ class adminController extends Controller
         return view('admin.index',compact('aAllDatas'));
     }
     public function create(){
-        return view('admin.create');
-    }
-    public function destroy(){
-        $filename = $_POST['id'];
+        $dateFromId = (object)'';
 
-        if(!$filename)
+        return view('admin.create',compact('dateFromId'));
+    }
+    public function edit($id){
+        $dateFromId = picsdata::findOrFail($id);
+        return view('admin.edit',compact('dateFromId'));
+    }
+
+    public function update($id,Requests\picSale $request){
+        $picSale = picsdata::findOrFail($id);
+        if($request->file('file'))
         {
+            $request->file('file');
+            if(is_array($request->file('file'))){
+                foreach($request->file('file') as $imgFiles){
+                    $imageName = $imgFiles->getClientOriginalName();
+                }
+            }else{
+                $imgFiles = $request->file('file');
+                $imageName = $request->file('file')->getClientOriginalName();
+            }
+
+            $path = base_path() . '/public/images/uploads/';
+
+            $imgFiles->move($path , $imageName)->getRealPath();
+
+            $createFiles = $request->all();
+
+            $createFiles['image']= $imgFiles->getClientOriginalName();
+            unset( $createFiles['file']);
+            $picSale->update($createFiles);
+
+        }else{
+            $createFiles = $request->all();
+            $picSale->update($createFiles);
+
+        }
+
+
+        return redirect('/admin');
+    }
+    public function destroy(Requests\picSale $request){
+        if($request->get('picDataId') && !empty($request->get('picDataId'))){
+            $picDataId = $request->get('picDataId');
+            $picsdata = picsdata::findOrFail( $picDataId );
+            $picsdata = $picsdata->delete();
+            if($picsdata){
+                return 1;
+            }
+        }else{
             return 0;
         }
 
-        $response = "200";
-
-        return $response;
     }
     public function store(Requests\picSale $request){
         if($request->file('file'))
@@ -62,13 +103,6 @@ class adminController extends Controller
             picsdata::create($createFiles);
             return redirect('/admin');
         }
-//        $createFiless = $request->all();
-//        var_dump($createFiles);
-//        dd($createFiless);
-//        dd($request->all());
-//        $fileAll =  $_POST;
-//        $file = $_FILES['file'];
-//        dd($fileAll);
-//        return "good";
+//
     }
 }

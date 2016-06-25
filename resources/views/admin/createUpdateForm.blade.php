@@ -23,8 +23,9 @@
         {{--<br>--}}
     {{--</div>--}}
 {{--</div>--}}
+
 <div class="col-md-10">
-    {!! Form::open(['enctype'=>"multipart/form-data",'method'=>'POST','action'=>$action,'files'=>true]) !!}
+    {!! Form::open(['enctype'=>"multipart/form-data",'method'=>$method,'action'=>$action,'files'=>true]) !!}
     {!! Form::label('type','выбрать жанр:') !!}
     {!! Form::select(
                 'type',[
@@ -39,14 +40,23 @@
                     'religion'=>'Религия',
                     'historicalPainting'=>'Историческая живопись',
                     'fantasy'=>'Фантазия',
-                 ]) !!}
-    {!! Form::text('name','',['class'=>'form-control','placeholder'=>'имя картины:']) !!}
-    {!! Form::text('about','',['class'=>'form-control','placeholder'=>'о картины:']) !!}
-    {!! Form::text('other','',['class'=>'form-control','placeholder'=>'дополнительно:']) !!}
-    {!! Form::number('price','',['class'=>'form-control','placeholder'=>'Цена:']) !!}
+                 ],isset($dateFromId->type)?$dateFromId->type:'') !!}
+    {!! Form::text('name',isset($dateFromId->name)?$dateFromId->name:'',['class'=>'form-control','placeholder'=>'имя картины:']) !!}
+    {!! Form::text('about',isset($dateFromId->about)?$dateFromId->about:'',['class'=>'form-control','placeholder'=>'о картины:']) !!}
+    {!! Form::text('other',isset($dateFromId->other)?$dateFromId->other:'',['class'=>'form-control','placeholder'=>'дополнительно:']) !!}
+    {!! Form::number('price',isset($dateFromId->price)?$dateFromId->price:'',['class'=>'form-control','placeholder'=>'Цена:']) !!}
     <br/>
     {!! Form::file('file', ['type'=>'file','multiple']) !!}
+    @if(isset($dateFromId->image) && !empty($dateFromId->image))
+        <div class="oldImage">
+            <img src="/images/uploads/{{$dateFromId->image}}">Был загружен рание
+        </div>
+        @else
+        <div class="oldImage">
+            В этой записе у Вас не было картины
+        </div>
+    @endif
     <br/>
-    {!! Form::submit("Создать",['class'=>'btn btn-primary form-control','id'=>'act-on-upload']) !!}
+    {!! Form::submit($buttonName,['class'=>'btn btn-primary form-control','id'=>'act-on-upload']) !!}
     {!! Form::close()!!}
 </div>

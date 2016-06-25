@@ -4,7 +4,8 @@
 @stop
 @section("content")
     <h2 class="text-center">Создать картину</h2>
-    @include('admin.createUpdateForm',['action'=>['adminController@store']])
+    @include('admin.createUpdateForm',['action'=>['adminController@store'],'method'=>'POST','buttonName'=>'Создать'])
+
 
 @stop
 @section("script")

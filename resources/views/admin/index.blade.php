@@ -25,11 +25,30 @@
                     @endif
                     <td>{{$aAllData->about}}</td>
                     <td>{{$aAllData->other}}</td>
-                    <td><img src="/images/resources/edit.png"></td>
-                    <td><img src="/images/resources/delete.png"></td>
+                    <td><a href="/admin/{{$aAllData->id}}/edit"><img src="/images/resources/edit.png"></a></td>
+                    <td><a data-toggle="modal" href="#myModal" data-token="{{ csrf_token() }}" data-id = {{$aAllData->id}} class='deleteRow'><img src="/images/resources/delete.png"></a></td>
                 </tr>
             @endforeach
         </table>
     @endif
 
+    <!-- Modal Dialog -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content panel-danger">
+                <div class="modal-header panel-heading">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Удаоение строки</h4>
+                </div>
+                <div class="modal-body">
+                    Вы действительно хотите удолить это строку ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" data-confirm="delete-ok">Удалить</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 @stop

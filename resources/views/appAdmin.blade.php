@@ -14,8 +14,8 @@
             <ul>
                 <li><a href="/admin"><i class="fa fa-home" aria-hidden="true"></i>Дом</a></li>
                 <li><a href="/admin/create"><i class="fa fa-plus" aria-hidden="true"></i>Создать</a></li>
-                <li><a href=""><i class="fa fa-home" aria-hidden="true"></i>v</a></li>
-                <li><a href=""><i class="fa fa-home" aria-hidden="true"></i>c</a></li>
+                {{--<li><a href=""><i class="fa fa-home" aria-hidden="true"></i>v</a></li>--}}
+                {{--<li><a href=""><i class="fa fa-home" aria-hidden="true"></i>c</a></li>--}}
                 <li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></li>
             </ul>
     </section>
