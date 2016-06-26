@@ -60,7 +60,7 @@ class adminController extends Controller
             $picSale->update($createFiles);
 
         }
-        
+
         return redirect('/admin');
     }
     public function destroy(Requests\picSale $request){
