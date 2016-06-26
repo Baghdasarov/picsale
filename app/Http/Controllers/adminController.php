@@ -15,7 +15,7 @@ class adminController extends Controller
     }
 
     public function getIndex(){
-        $aAllDatas = picsdata::all();
+        $aAllDatas = picsdata::orderby('created_at','desc')->get();
         return view('admin.index',compact('aAllDatas'));
     }
     public function create(){
@@ -32,7 +32,6 @@ class adminController extends Controller
         $picSale = picsdata::findOrFail($id);
         if($request->file('file'))
         {
-            $request->file('file');
             if(is_array($request->file('file'))){
                 foreach($request->file('file') as $imgFiles){
                     $imageName = $imgFiles->getClientOriginalName();
@@ -50,6 +49,10 @@ class adminController extends Controller
 
             $createFiles['image']= $imgFiles->getClientOriginalName();
             unset( $createFiles['file']);
+
+            if(!empty($picSale->image)){
+                unlink(base_path() ."/public/images/uploads/".$picSale->image);
+            }
             $picSale->update($createFiles);
 
         }else{
@@ -57,8 +60,7 @@ class adminController extends Controller
             $picSale->update($createFiles);
 
         }
-
-
+        
         return redirect('/admin');
     }
     public function destroy(Requests\picSale $request){
@@ -103,6 +105,5 @@ class adminController extends Controller
             picsdata::create($createFiles);
             return redirect('/admin');
         }
-//
     }
 }

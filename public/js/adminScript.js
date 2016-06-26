@@ -20,4 +20,18 @@ $(document).ready(function(){
                 });
             })
     })
+    $(document).on('click','.imgSource',function(){
+        $('#zoomImg').show("300").animate({opacity: '1'});
+
+        if($(this).find('img')){
+            var thisImgSrc = $(this).find('img').attr('src');
+            $("#zoomImg .zoomImgContent img").attr("src",thisImgSrc);
+        }
+        $(".closeImg").click(function(){
+            $('#zoomImg').animate({opacity: '0'}).hide("500");
+        })
+        $("#zoomImg").click(function(){
+            $('#zoomImg').animate({opacity: '0'}).hide("300");
+        })
+    })
 })

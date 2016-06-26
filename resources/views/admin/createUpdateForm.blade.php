@@ -25,22 +25,36 @@
 {{--</div>--}}
 
 <div class="col-md-10">
-    {!! Form::open(['enctype'=>"multipart/form-data",'method'=>$method,'action'=>$action,'files'=>true]) !!}
+    {!! Form::open(['enctype'=>"multipart/form-data",'autocomplete'=>"off",'method'=>$method,'action'=>$action,'files'=>true]) !!}
     {!! Form::label('type','выбрать жанр:') !!}
     {!! Form::select(
                 'type',[
-                    'Scape'=>'Пейзаж',
-                    'urbanScape'=>'Городской пейзаж',
-                    'seaScape'=>'Морской пейзаж',
-                    'conversatioPiece'=>'Жанровая картина',
-                    'portrait'=>'Портрет',
-                    'nudity'=>'Ню, обнаженная натура',
-                    'animal'=>'Анималистика',
-                    'architecture'=>'Архитектура',
-                    'religion'=>'Религия',
-                    'historicalPainting'=>'Историческая живопись',
-                    'fantasy'=>'Фантазия',
+                    'Пейзаж'=>'Пейзаж',
+                    'ГородскойПейзаж'=>'Городской пейзаж',
+                    'МорскойПейзаж'=>'Морской пейзаж',
+                    'ЖанроваяКартина'=>'Жанровая картина',
+                    'Портрет'=>'Портрет',
+                    'обнаженнаяНатура'=>'Ню, обнаженная натура',
+                    'Анималистика'=>'Анималистика',
+                    'Архитектура'=>'Архитектура',
+                    'Религия'=>'Религия',
+                    'ИсторическаяЖивопис'=>'Историческая живопись',
+                    'Фантазия'=>'Фантазия',
                  ],isset($dateFromId->type)?$dateFromId->type:'') !!}
+    {{--{!! Form::select(--}}
+                {{--'type',[--}}
+                    {{--'Scape'=>'Пейзаж',--}}
+                    {{--'urbanScape'=>'Городской пейзаж',--}}
+                    {{--'seaScape'=>'Морской пейзаж',--}}
+                    {{--'conversatioPiece'=>'Жанровая картина',--}}
+                    {{--'portrait'=>'Портрет',--}}
+                    {{--'nudity'=>'Ню, обнаженная натура',--}}
+                    {{--'animal'=>'Анималистика',--}}
+                    {{--'architecture'=>'Архитектура',--}}
+                    {{--'religion'=>'Религия',--}}
+                    {{--'historicalPainting'=>'Историческая живопись',--}}
+                    {{--'fantasy'=>'Фантазия',--}}
+                 {{--],isset($dateFromId->type)?$dateFromId->type:'') !!}--}}
     {!! Form::text('name',isset($dateFromId->name)?$dateFromId->name:'',['class'=>'form-control','placeholder'=>'имя картины:']) !!}
     {!! Form::text('about',isset($dateFromId->about)?$dateFromId->about:'',['class'=>'form-control','placeholder'=>'о картины:']) !!}
     {!! Form::text('other',isset($dateFromId->other)?$dateFromId->other:'',['class'=>'form-control','placeholder'=>'дополнительно:']) !!}
@@ -49,7 +63,7 @@
     {!! Form::file('file', ['type'=>'file','multiple']) !!}
     @if(isset($dateFromId->image) && !empty($dateFromId->image))
         <div class="oldImage">
-            <img src="/images/uploads/{{$dateFromId->image}}">Был загружен рание
+            <img src="/images/uploads/{{$dateFromId->image}}">Была загружен рание
         </div>
         @else
         <div class="oldImage">

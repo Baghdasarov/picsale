@@ -22,6 +22,13 @@
     <section class="adminContent">
         @yield('content')
     </section>
+    <!--zoom images -->
+    <div id="zoomImg">
+        <div class="zoomImgContent">
+            <span class='closeImg'>&times;</span>
+            <img src="" />
+        </div>
+    </div>
 
     {{--SCRIPT--}}
     <script src="/js/jquery/test/data/jquery-1.9.1.js" ></script>

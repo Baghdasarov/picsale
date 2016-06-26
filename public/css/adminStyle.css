@@ -54,3 +54,36 @@ td img{
 .oldImage img{
     width: 200px;
 }
+#zoomImg{
+    position: absolute;
+    background: rgba(35,35,35,0.5);
+    display: none;
+    opacity:0;
+    overflow: hidden;
+    width: 100%;
+}
+#zoomImg .zoomImgContent{
+    right: 0;
+    padding: 6% 8%;
+    top: 0px;
+    left: 5%;
+    bottom: 0px;
+    overflow: hidden;
+}
+#zoomImg img{
+    width: 80%;
+    max-height: 600px;
+    margin-left: 15%;
+}
+.closeImg{
+    right: 13%;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: 0.8;
+    position: absolute;
+    cursor: pointer;
+}
