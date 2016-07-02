@@ -2,3 +2,114 @@ body{
     padding: 0px;
     margin: 0px;
 }
+/*MENU*/
+.headerMenu{
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    top:0px;
+    width: 100%;
+    height: 280px;
+    z-index: 20;
+}
+.nav{
+    margin-top: 40px;
+    width: 100%;
+}
+.headerMenu nav{
+    width: 60%;
+    margin: 4% auto;
+}
+.headerMenu nav li{
+    margin-right: 6%;
+}
+.headerMenu nav li a{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 18px;
+    -webkit-transition: all 1s;
+}
+.headerMenu nav a:hover{
+    background:inherit;
+    color: red;
+}
+.site-title {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.site-branding{
+    text-align: center;
+}
+.site-description {
+    font-family: 'Arizonia', cursive;
+    font-size: 30px;
+    line-height: 32px;
+    position: relative;
+    display: inline-block;
+    margin-top: 7px;
+    color:#fff;
+}
+.static-header-logo h1 {
+    display: inline-block;
+    float: none;
+}
+
+.site-description:before {
+    content: '';
+    width: 99px;
+    height: 1px;
+    position: absolute;
+    left: -114px;
+    top: 50%;
+    margin-top: 4px;
+    background: #555554;
+}
+.site-description:after {
+    content: '';
+    width: 99px;
+    height: 1px;
+    position: absolute;
+    right: -114px;
+    top: 50%;
+    margin-top: 4px;
+    background: #555554;
+}
+
+
+/*END MENU*/
+/*SLIDER*/
+.slider{
+    position: relative;
+}
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 768px;
+    border: 0;
+}
+/*END SLIDER*/
