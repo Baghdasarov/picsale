@@ -137,7 +137,6 @@ body{
 /*Content Gallery*/
 .contentGallery{
     width: 100%;
-    height: 500px;
     background: url("/images/resources/parallax1.jpg");
 }
 .contentGallery h3{
@@ -149,6 +148,11 @@ body{
     text-transform: uppercase;
     color: #fff;
     padding-bottom: 13px;
+}
+.contentGallery h4{
+    text-align: center;
+    margin-top: 5%;
+    color: #fff;
 }
 .contentGallery h3:after {
     content: '';
@@ -212,6 +216,7 @@ body{
     font-family: 'Pacifico', cursive;
     font-size: 40px;
     line-height: 70px;
+    cursor: pointer;
     letter-spacing: -.5px;
 }
 .thumb_overlay span span {
@@ -225,12 +230,33 @@ body{
 }
 .isotop{
     margin-top: 3%;
+    position: relative;
+    margin-bottom: 30px;
 }
 .grid .thumb img{
-    height:200px;
+    height: 200px;
+    min-width: 320px;
+    max-width: 350px;
 }
 .thumb:hover .thumb_overlay {
     opacity: 0.6;
     background: rgba(35,35,35,0.8);
+}
+.pagination{
+    padding-left:0px;
+    margin: 20px 30px;
+    width: 100%;
+}
+.pagination>li>a, .pagination>li>span{
+    background-color: rgba(35,35,35,0.6);
+    color: #ffffff;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    background-color: #5d452d;
+    border-color: #a7986f;
+}
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover{
+    background-color: rgba(35,35,35,0.6);
+    color: #ffffff;
 }
 /*End Content Gallery*/

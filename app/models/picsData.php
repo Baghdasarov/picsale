@@ -32,6 +32,9 @@ class picsdata extends Model
         );
     }
     public static function getAll(){
-        return DB::table('picsdatas')->get();
+        return DB::table('picsdatas')->paginate(3);
+    }
+    public static function getFilterGallery($getFilterGallerykey){
+        return DB::table('picsdatas')->where('type',$getFilterGallerykey)->paginate(3);
     }
 }

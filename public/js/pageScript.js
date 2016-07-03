@@ -32,4 +32,39 @@ $(document).ready(function(){
         after: function(){}     // Function: After callback
     });
     /*end slider*/
+
+    /*Filter gallery*/
+        $("#isotop_filters span").click(function(){
+        $("#isotop_filters span").removeClass('is-checked');
+        $(this).addClass('is-checked');
+         var token = $(this).data('token');
+         var getFiltGalKey = $(this).data('filter');
+            $.ajax({
+                url: 'getFilterGallery',
+                type: 'post',
+                dataType: 'json',
+                data: {_token :token,"getFiltrGalKey":getFiltGalKey},
+                success: function(result) {
+                    $(".isotop").html("");
+                    if(result.data.length>0){
+                        $.each(result.data, function( index, value ) {
+                            if(value.image.length>0){
+                                var imgSrc = "images/uploads/"+value.image;
+                            }else{
+                                var imgSrc = 'images/resources/unknown.jpg';
+                            }
+                            $(".isotop").append("<div class='grid isotop_item category01'>" +
+                                "<div data-fancybox-group='1' class='thumb'>" +
+                                "<img src="+imgSrc+" alt=''>" +
+                                "<span class='thumb_overlay'>" +
+                                "<span><span><p>"+value.name+"</p>Цена։"+value.price+"</span></span></span></div></div>");
+                        });
+                    }else{
+                        $(".isotop").html("<h4>В этом разделе нет картин<h4>");
+                    }
+                }
+            });
+
+        })
+    /*END filter gallery*/
 })
