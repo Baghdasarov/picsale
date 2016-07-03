@@ -20,20 +20,30 @@ body{
     margin: 4% auto;
 }
 .headerMenu nav li{
-    margin-right: 6%;
+    margin: 0px 4%;
+    display: inline-block;
 }
 .headerMenu nav li a{
     text-transform: uppercase;
     color:#fff;
-    font-size: 18px;
+    font-size: 1.3vw;
     -webkit-transition: all 1s;
 }
 .headerMenu nav a:hover{
     background:inherit;
     color: red;
 }
+.navbar-nav>li>a{
+    line-height:inherit;
+}
+.navbar-nav{
+    margin: 40px 0px;
+}
+.nav>li>a{
+    padding: inherit;
+}
 .site-title {
-    margin: 0;
+    margin: 0px 0px 15px;
     width: 100%;
     text-align: center;
 }
@@ -42,12 +52,13 @@ body{
 }
 .site-description {
     font-family: 'Arizonia', cursive;
-    font-size: 30px;
+    font-size: 4vw;
+    width: 70%;
     line-height: 32px;
     position: relative;
     display: inline-block;
     margin-top: 7px;
-    color:#fff;
+    color: #fff;
 }
 .static-header-logo h1 {
     display: inline-block;
@@ -56,27 +67,36 @@ body{
 
 .site-description:before {
     content: '';
-    width: 99px;
+    width: 30%;
     height: 1px;
     position: absolute;
-    left: -114px;
+    left: 0;
     top: 50%;
     margin-top: 4px;
     background: #555554;
 }
 .site-description:after {
     content: '';
-    width: 99px;
+    width: 30%;
     height: 1px;
     position: absolute;
-    right: -114px;
+    right: 0px;
     top: 50%;
     margin-top: 4px;
     background: #555554;
 }
-
+.headerMenuPosition{
+    position: fixed;
+    width: 100%;
+    padding: 1% 20%;
+    margin: 0% auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,0.6);
+}
 
 /*END MENU*/
+
 /*SLIDER*/
 .slider{
     position: relative;
@@ -109,7 +129,108 @@ body{
     display: block;
     float: left;
     width: 100%;
-    height: 768px;
+    max-height: 768px;
     border: 0;
 }
 /*END SLIDER*/
+
+/*Content Gallery*/
+.contentGallery{
+    width: 100%;
+    height: 500px;
+    background: url("/images/resources/parallax1.jpg");
+}
+.contentGallery h3{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    position: relative;
+    font-size: 64px;
+    line-height: 64px;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 13px;
+}
+.contentGallery h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 92px;
+    height: 5px;
+    background: #fff;
+}
+
+#isotop_filters{
+    margin-top: 3%;
+}
+#isotop_filters span {
+    display: inline-block;
+    border-radius: 15px;
+    background: transparent;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 5px 0px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 24px;
+    line-height: 37px;
+    letter-spacing: -.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#isotop_filters span:hover, #isotop_filters span.is-checked{
+    background: rgba(35,35,35,0.6);
+    transition: 1s all;
+}
+
+.container [class*="grid"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 30px;
+}
+.thumb_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -moz-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.8s all ease;
+    color: #fff;
+    background: transparent;
+    text-align: center;
+}
+.thumb_overlay span {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: table;
+    vertical-align: middle;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    line-height: 70px;
+    letter-spacing: -.5px;
+}
+.thumb_overlay span span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.thumb {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.isotop{
+    margin-top: 3%;
+}
+.grid .thumb img{
+    height:200px;
+}
+.thumb:hover .thumb_overlay {
+    opacity: 0.6;
+    background: rgba(35,35,35,0.8);
+}
+/*End Content Gallery*/

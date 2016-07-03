@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages/index');
-});
+Route::get('/','picController@getIndex');
+
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::RESOURCE('admin','adminController');

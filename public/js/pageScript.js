@@ -1,4 +1,14 @@
 $(document).ready(function(){
+    /*menu*/
+    $(document).scroll(function(){
+        if($(document).scrollTop() > "200"){
+            $('.nav.navbar-nav').addClass('headerMenuPosition');
+        }else{
+            $('.nav.navbar-nav').removeClass('headerMenuPosition');
+        }
+    })
+
+    /*end menu*/
     /*slider*/
     $(function() {
         $(".rslides").responsiveSlides();
