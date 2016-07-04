@@ -19,8 +19,8 @@
             <h3>Gallery</h3>
             <div class="contentGalleryPosition">
                 <div id="isotop_filters" class="button-group">
-                    @foreach($picTypeLists as $picTypeList)
-                        <span data-filter="{{$picTypeList}}" data-token="{{ csrf_token() }}">{{$picTypeList}}</span>
+                    @foreach($picTypeLists as $picTypeListkey=>$picTypeList)
+                        <span data-filter="{{$picTypeListkey}}" data-token="{{ csrf_token() }}">{{$picTypeList}}</span>
                     @endforeach()
                     <span data-filter="*" class="is-checked">вся галлерея</span>
                 </div>
