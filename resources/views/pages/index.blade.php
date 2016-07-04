@@ -22,7 +22,7 @@
                     @foreach($picTypeLists as $picTypeListkey=>$picTypeList)
                         <span data-filter="{{$picTypeListkey}}" data-token="{{ csrf_token() }}">{{$picTypeList}}</span>
                     @endforeach()
-                    <span data-filter="*" class="is-checked">вся галлерея</span>
+                    <span data-filter="" data-token="{{ csrf_token() }}" class="is-checked">вся галлерея</span>
                 </div>
                 <div class="row isotop">
                     @foreach($picsDatas as $picsData)
