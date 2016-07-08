@@ -8,24 +8,24 @@ use App\Http\Requests;
 
 class picController extends Controller
 {
-    public function getIndex(){
-        $picTypeLists = picsdata::typePicture();
-        $picsDatas = picsdata::getAll();
-        return view('pages.index',compact('picTypeLists','picsDatas'));
-    }
-    public function getFilterGallery(Requests\picSale $request){
-        $getFilterGalleryKey =$request->get('getFiltrGalKey');
-        $getGalleryType = picsdata::getFilterGallery($getFilterGalleryKey);
+    public function getIndex(Requests\picSale $request){
+        if($request->ajax()){
+            $getFilterGalleryKey =$request->get('getFiltrGalKey');
+            $getGalleryType = picsdata::getFilterGallery($getFilterGalleryKey);
 
-//        return response()->json([
-//            'status' => 'success',
-//            'errors' => false,
-//            'data' => [
-//                'rows' => json_decode($getGalleryType->toJson()),
-//                'paginationMarkup' => $getGalleryType->render()
-//            ]
-//        ], 200);
+            return response()->json([
+                'status' => 'success',
+                'errors' => false,
+                'data' => [
+                    'rows' => json_decode($getGalleryType->toJson()),
+                    'paginationMarkup' => (string)$getGalleryType->links(),
+                ]
+            ], 200);
+        }else{
+            $picTypeLists = picsdata::typePicture();
+            $picsDatas = picsdata::getAll();
+            return view('pages.index',compact('picTypeLists','picsDatas'));
+        }
 
-        return json_encode($getGalleryType);
     }
 }

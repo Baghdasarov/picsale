@@ -12,7 +12,6 @@
 */
 
 Route::get('/','picController@getIndex');
-Route::post('/getFilterGallery','picController@getFilterGallery');
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();

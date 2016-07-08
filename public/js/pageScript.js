@@ -1,5 +1,10 @@
 $(document).ready(function(){
     /*menu*/
+    $(".nav.navbar-nav li").click(function(){
+        $(".nav.navbar-nav li a").css('background','none');
+        $(".nav.navbar-nav li").removeClass('clickMenuGround');
+        $(this).addClass('clickMenuGround');
+    })
     $(document).scroll(function(){
         if($(document).scrollTop() > "200"){
             $('.nav.navbar-nav').addClass('headerMenuPosition');
@@ -7,7 +12,6 @@ $(document).ready(function(){
             $('.nav.navbar-nav').removeClass('headerMenuPosition');
         }
     })
-
     /*end menu*/
     /*slider*/
     $(function() {
@@ -35,35 +39,41 @@ $(document).ready(function(){
 
     /*Filter gallery*/
         $("#isotop_filters span").click(function(){
-        $("#isotop_filters span").removeClass('is-checked');
-        $(this).addClass('is-checked');
-         var token = $(this).data('token');
-         var getFiltGalKey = $(this).data('filter');
-            $.ajax({
-                url: 'getFilterGallery',
-                type: 'post',
-                dataType: 'json',
-                data: {_token :token,"getFiltrGalKey":getFiltGalKey},
-                success: function(result) {
-                    $(".isotop").html("");
-                    if(result.data.length>0){
-                        $.each(result.data, function( index, value ) {
-                            if(value.image.length>0){
-                                var imgSrc = "images/uploads/"+value.image;
+             $("#isotop_filters span").removeClass('is-checked');
+             $(this).addClass('is-checked');
+             var token = $("#isotop_filters").data('token');
+             var getFiltGalKey = $(this).data('filter');
+                $.ajax({
+                    url: '',
+                    type: 'get',
+                    dataType: 'json',
+                    data: {_token :token,"getFiltrGalKey":getFiltGalKey},
+                    success: function(result) {
+                        $(".isotop").html("");
+                        if(result.data.rows.data.length>0){
+                            $.each(result.data.rows.data, function( index, value ) {
+                                if(value.image.length>0){
+                                    var imgSrc = "images/uploads/"+value.image;
+                                }else{
+                                    var imgSrc = 'images/resources/unknown.jpg';
+                                }
+                                $(".isotop").append("<div class='grid isotop_item category01'>" +
+                                    "<div data-fancybox-group='1' class='thumb'>" +
+                                    "<img src="+imgSrc+" alt=''>" +
+                                    "<span class='thumb_overlay'>" +
+                                    "<span><span><p>"+value.name+"</p>Цена։"+value.price+"</span></span></span></div></div>");
+                            });
+                            if(getFiltGalKey.length<=0){
+                                $("#pagination").html(result.data.paginationMarkup);
                             }else{
-                                var imgSrc = 'images/resources/unknown.jpg';
+                                $("#pagination").html('');
                             }
-                            $(".isotop").append("<div class='grid isotop_item category01'>" +
-                                "<div data-fancybox-group='1' class='thumb'>" +
-                                "<img src="+imgSrc+" alt=''>" +
-                                "<span class='thumb_overlay'>" +
-                                "<span><span><p>"+value.name+"</p>Цена։"+value.price+"</span></span></span></div></div>");
-                        });
-                    }else{
-                        $(".isotop").html("<h4>В этом разделе нет картин<h4>");
+
+                        }else{
+                            $(".isotop").html("<h4>В этом разделе нет картин<h4>");
+                        }
                     }
-                }
-            });
+                });
 
         })
     /*END filter gallery*/

@@ -18,11 +18,11 @@
         <div class="container">
             <h3>Gallery</h3>
             <div class="contentGalleryPosition">
-                <div id="isotop_filters" class="button-group">
+                <div id="isotop_filters" class="button-group" data-token="{{ csrf_token() }}">
                     @foreach($picTypeLists as $picTypeListkey=>$picTypeList)
-                        <span data-filter="{{$picTypeListkey}}" data-token="{{ csrf_token() }}">{{$picTypeList}}</span>
+                        <span data-filter="{{$picTypeListkey}}">{{$picTypeList}}</span>
                     @endforeach()
-                    <span data-filter="" data-token="{{ csrf_token() }}" class="is-checked">вся галлерея</span>
+                    <span data-filter="" class="is-checked">вся галлерея</span>
                 </div>
                 <div class="row isotop">
                     @foreach($picsDatas as $picsData)
@@ -44,8 +44,8 @@
                             </div>
                         </div>
                     @endforeach
-                    {!! $picsDatas->render() !!}
                 </div>
+                <div id="pagination">{!! $picsDatas->links() !!}</div>
             </div>
 
         </div>

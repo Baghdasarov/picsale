@@ -15,17 +15,22 @@ body{
     margin-top: 40px;
     width: 100%;
 }
+.clickMenuGround{
+    background: rgb(68, 71, 78);
+}
 .headerMenu nav{
     width: 60%;
     margin: 4% auto;
 }
 .headerMenu nav li{
-    margin: 0px 4%;
+    margin: 0px 2%;
+    padding: 1% 10px;
     display: inline-block;
 }
 .headerMenu nav li a{
     text-transform: uppercase;
     color:#fff;
+    background: none;
     font-size: 1.3vw;
     -webkit-transition: all 1s;
 }
@@ -88,7 +93,7 @@ body{
 .headerMenuPosition{
     position: fixed;
     width: 100%;
-    padding: 1% 20%;
+    padding: 0% 20%;
     margin: 0% auto;
     top: 0px;
     left: 0px;
