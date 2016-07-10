@@ -12,6 +12,7 @@
 */
 
 Route::get('/','picController@getIndex');
+Route::get('/gallery','picController@getGallery');
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();

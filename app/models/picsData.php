@@ -31,16 +31,28 @@ class picsdata extends Model
             ['image' => $image]
         );
     }
-    public static function getAll(){
-        return DB::table('picsdatas')->paginate(3);
+    public static function getAll($pageinate){
+        return DB::table('picsdatas')->paginate($pageinate);
     }
-    public static function getFilterGallery($getFilterGallerykey){
+//    public static function getAllGallery(){
+//        return DB::table('picsdatas')->paginate(20);
+//    }
+    public static function getFilterGallery($getFilterGallerykey,$pageinate){
 
         if(empty($getFilterGallerykey)){
-            return DB::table('picsdatas')->paginate(3);
+            return DB::table('picsdatas')->paginate($pageinate);
         }else{
-            return DB::table('picsdatas')->where('type',$getFilterGallerykey)->paginate(3);
+            return DB::table('picsdatas')->where('type',$getFilterGallerykey)->paginate($pageinate);
         }
         
     }
+//    public static function getFilterGallery($getFilterGallerykey){
+//
+//        if(empty($getFilterGallerykey)){
+//            return DB::table('picsdatas')->paginate(20);
+//        }else{
+//            return DB::table('picsdatas')->where('type',$getFilterGallerykey)->paginate(3);
+//        }
+//
+//    }
 }

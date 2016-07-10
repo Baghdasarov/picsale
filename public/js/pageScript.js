@@ -1,5 +1,20 @@
 $(document).ready(function(){
+    var url      = window.location.href;
+
     /*menu*/
+    if(url.split('/')[3].length > 0){
+        $(".nav.navbar-nav li").each(function(){
+            if(url.split('/')[3] == $(this).data('name')){
+                $(".nav.navbar-nav li a").css('background','none');
+                $(".nav.navbar-nav li").removeClass('clickMenuGround');
+                $(this).addClass('clickMenuGround');
+            }
+        })
+    }else{
+        $(".nav.navbar-nav li a").css('background','none');
+        $(".nav.navbar-nav li").removeClass('clickMenuGround');
+        $(".nav.navbar-nav li[data-name='home']").addClass('clickMenuGround');
+    }
     $(".nav.navbar-nav li").click(function(){
         $(".nav.navbar-nav li a").css('background','none');
         $(".nav.navbar-nav li").removeClass('clickMenuGround');
@@ -44,7 +59,7 @@ $(document).ready(function(){
              var token = $("#isotop_filters").data('token');
              var getFiltGalKey = $(this).data('filter');
                 $.ajax({
-                    url: '',
+                    url: url,
                     type: 'get',
                     dataType: 'json',
                     data: {_token :token,"getFiltrGalKey":getFiltGalKey},
@@ -77,4 +92,21 @@ $(document).ready(function(){
 
         })
     /*END filter gallery*/
+    /*footer*/
+    var hover_bottom=0
+    $(".footer_right_imgs").hover(function(){
+        if(hover_bottom%2==0){
+            $(this).css({
+                "margin-top":"-40px"
+            })
+        }
+        else{
+            $(this).css({
+                "margin-top":"0px"
+            })
+        }
+        hover_bottom++;
+    })
+    /*END footer*/
 })
+

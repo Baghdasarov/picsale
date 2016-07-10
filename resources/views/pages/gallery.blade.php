@@ -1,5 +1,11 @@
 @extends('appPages')
 
+@section('otherPageStyle')
+    <link href="/css/otherPageStyle.css" rel="stylesheet">
+    <style>
+
+    </style>
+@stop
 @section('slider')
     <section class="slider">
         <ul class="rslides">
@@ -14,6 +20,7 @@
             </li>
         </ul>
     </section>
+
 @stop
 @section('content')
     <section class="contentGallery">
@@ -46,8 +53,9 @@
                             </div>
                         </div>
                     @endforeach
+                        <div id="pagination">{!! $picsDatas->links() !!}</div>
                 </div>
-                <div id="pagination">{!! $picsDatas->links() !!}</div>
+
             </div>
 
         </div>
