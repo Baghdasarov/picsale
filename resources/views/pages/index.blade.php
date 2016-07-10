@@ -18,7 +18,7 @@
 @section('content')
     <section class="contentGallery">
         <div class="container">
-            <h3>Gallery</h3>
+            <h3>ГОЛЛЕРЕЯ</h3>
             <div class="contentGalleryPosition">
                 <div id="isotop_filters" class="button-group" data-token="{{ csrf_token() }}">
                     @foreach($picTypeLists as $picTypeListkey=>$picTypeList)

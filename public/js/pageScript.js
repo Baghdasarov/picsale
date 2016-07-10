@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var url      = window.location.href;
-
+    var data_filter = localStorage.getItem("data_filter");
     /*menu*/
     if(url.split('/')[3].length > 0){
         $(".nav.navbar-nav li").each(function(){
@@ -78,19 +78,36 @@ $(document).ready(function(){
                                     "<span class='thumb_overlay'>" +
                                     "<span><span><p>"+value.name+"</p>Цена։"+value.price+"</span></span></span></div></div>");
                             });
-                            if(getFiltGalKey.length<=0){
-                                $("#pagination").html(result.data.paginationMarkup);
-                            }else{
-                                $("#pagination").html('');
-                            }
 
                         }else{
                             $(".isotop").html("<h4>В этом разделе нет картин<h4>");
+                        }
+                        if(result.data.paginationMarkup.length>0){
+                            $("#pagination").html(result.data.paginationMarkup);
+                        }else{
+                            $("#pagination").html('');
                         }
                     }
                 });
 
         })
+
+        console.log(data_filter);
+        if(data_filter !== null && data_filter.length>0){
+            $("#isotop_filters span").each(function(){
+                if($(this).data('filter')==data_filter){
+                    $("#isotop_filters span").removeClass('is-checked')
+                    $(this).addClass('is-checked');
+                    $($("#isotop_filters .is-checked")).click();
+                }
+            })
+        }
+        $(document).on('click',"#pagination .pagination a",function(){
+                localStorage.removeItem("data_filter");
+                localStorage.setItem("data_filter", $("#isotop_filters .is-checked").data('filter'));
+
+        });
+
     /*END filter gallery*/
     /*footer*/
     var hover_bottom=0

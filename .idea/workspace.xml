@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbd76823-ea32-4b47-b7d6-96d12b6f9559" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/bootstrap" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery" afterPath="$PROJECT_DIR$/public/js/jquery" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/picController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/picController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/picsData.php" afterPath="$PROJECT_DIR$/app/models/picsData.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/otherPageStyle.css" afterPath="$PROJECT_DIR$/public/css/otherPageStyle.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pageScript.js" afterPath="$PROJECT_DIR$/public/js/pageScript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/gallery.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/gallery.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
     </list>
     <ignored path="picsale.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,31 +37,31 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.2363636">
-              <caret line="22" column="60" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="60" />
+            <state vertical-scroll-proportion="-6.181818">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageScript.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pageScript.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/pageScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+            <state vertical-scroll-proportion="1.4578097">
+              <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
               <folding>
-                <marker date="1468145017532" expanded="true" signature="3698:4046" placeholder="..." />
-                <marker date="1468145017532" expanded="true" signature="3782:4040" placeholder="..." />
+                <marker date="1468165578096" expanded="true" signature="3756:4104" placeholder="..." />
+                <marker date="1468165578096" expanded="true" signature="3840:4098" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appPages.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appPages.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/appPages.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4048964">
-              <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
+            <state vertical-scroll-proportion="-6.8076925">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -72,8 +80,8 @@
       <file leaf-file-name="gallery.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/gallery.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
-              <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+            <state vertical-scroll-proportion="-13.730769">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -82,8 +90,8 @@
       <file leaf-file-name="picController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/picController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.192307">
-              <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+            <state vertical-scroll-proportion="-21.576923">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding>
                 <element signature="e#40#68#0#PHP" expanded="true" />
               </folding>
@@ -94,8 +102,8 @@
       <file leaf-file-name="otherPageStyle.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/otherPageStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -114,8 +122,8 @@
       <file leaf-file-name="picsData.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/picsData.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.730769">
-              <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+            <state vertical-scroll-proportion="-4.1923075">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -169,16 +177,16 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/adminController.php" />
         <option value="$PROJECT_DIR$/public/css/adminStyle.css" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/appAdmin.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/gallery.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/otherPageStyle.css" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/picController.php" />
-        <option value="$PROJECT_DIR$/app/models/picsData.php" />
         <option value="$PROJECT_DIR$/public/css/pageStyle.css" />
-        <option value="$PROJECT_DIR$/public/js/pageScript.js" />
         <option value="$PROJECT_DIR$/resources/views/appPages.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/gallery.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/picsData.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/picController.php" />
+        <option value="$PROJECT_DIR$/public/css/otherPageStyle.css" />
+        <option value="$PROJECT_DIR$/public/js/pageScript.js" />
       </list>
     </option>
   </component>
@@ -824,6 +832,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3357271">
           <caret line="11" column="58" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -850,36 +859,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/otherPageStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
           <caret line="14" column="47" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/picController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.192307">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/picsData.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.730769">
-          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -892,38 +875,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/gallery.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/appPages.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
-          <caret line="55" column="47" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+        <state vertical-scroll-proportion="-6.8076925">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2363636">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="60" />
+        <state vertical-scroll-proportion="-6.181818">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/gallery.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/picsData.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.1923075">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/otherPageStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/picController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.576923">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/pageScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        <state vertical-scroll-proportion="1.4578097">
+          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
           <folding>
-            <marker date="1468145017532" expanded="true" signature="3698:4046" placeholder="..." />
-            <marker date="1468145017532" expanded="true" signature="3782:4040" placeholder="..." />
+            <marker date="1468165578096" expanded="true" signature="3756:4104" placeholder="..." />
+            <marker date="1468165578096" expanded="true" signature="3840:4098" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/appPages.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4048964">
-          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>

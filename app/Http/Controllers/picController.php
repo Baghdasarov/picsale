@@ -31,7 +31,7 @@ class picController extends Controller
     public function getGallery(Requests\picSale $request){
             if($request->ajax()) {
                 $getFilterGalleryKey = $request->get('getFiltrGalKey');
-                $getGalleryType = picsdata::getFilterGallery($getFilterGalleryKey,20);
+                $getGalleryType = picsdata::getFilterGallery($getFilterGalleryKey,9);
 
                 return response()->json([
                     'status' => 'success',
@@ -43,7 +43,7 @@ class picController extends Controller
                 ], 200);
             }
             $picTypeLists = picsdata::typePicture();
-            $picsDatas = picsdata::getAll(20);
+            $picsDatas = picsdata::getAll(9);
             return view('pages.gallery',compact('picTypeLists','picsDatas'));
 
     }

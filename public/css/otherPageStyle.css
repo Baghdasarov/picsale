@@ -5,14 +5,8 @@
     height: 280px;
 
 }
-/*#isotop_filters span{*/
-    /*display: block;*/
-/*}*/
 
-/*.isotop{*/
-    /*width: 65%;*/
-    /*float: right;*/
-/*}*/
 .container [class*="grid"]{
     margin-bottom: 4%;
+    width: 30%;
 }

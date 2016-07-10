@@ -32,7 +32,7 @@ class picsdata extends Model
         );
     }
     public static function getAll($pageinate){
-        return DB::table('picsdatas')->paginate($pageinate);
+        return DB::table('picsdatas')->orderBy('created_at', 'desc')->paginate($pageinate);
     }
 //    public static function getAllGallery(){
 //        return DB::table('picsdatas')->paginate(20);
@@ -40,9 +40,9 @@ class picsdata extends Model
     public static function getFilterGallery($getFilterGallerykey,$pageinate){
 
         if(empty($getFilterGallerykey)){
-            return DB::table('picsdatas')->paginate($pageinate);
+            return DB::table('picsdatas')->orderBy('created_at', 'desc')->paginate($pageinate);
         }else{
-            return DB::table('picsdatas')->where('type',$getFilterGallerykey)->paginate($pageinate);
+            return DB::table('picsdatas')->where('type',$getFilterGallerykey)->orderBy('created_at', 'desc')->paginate($pageinate);
         }
         
     }
