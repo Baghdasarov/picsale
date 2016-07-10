@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbd76823-ea32-4b47-b7d6-96d12b6f9559" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/otherPageStyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/pages/gallery.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery" afterPath="$PROJECT_DIR$/public/js/jquery" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/picController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/picController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/picsData.php" afterPath="$PROJECT_DIR$/app/models/picsData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/pageStyle.css" afterPath="$PROJECT_DIR$/public/css/pageStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pageScript.js" afterPath="$PROJECT_DIR$/public/js/pageScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/appPages.blade.php" afterPath="$PROJECT_DIR$/resources/views/appPages.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/pages/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" />
     </list>
     <ignored path="picsale.iws" />
     <ignored path=".idea/workspace.xml" />

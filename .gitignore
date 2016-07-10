@@ -5,7 +5,4 @@ Homestead.yaml
 Homestead.json
 .env
 /config
-/public/bootstrap
-/public/css/Font-Awesome
-/public/js/jquery
 readme.md
