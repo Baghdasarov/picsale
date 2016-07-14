@@ -30,6 +30,7 @@
                 </tr>
             @endforeach
         </table>
+        <div id="pagination">{!! $aAllDatas->links() !!}</div>
     @endif
 
     <!-- Modal Dialog -->

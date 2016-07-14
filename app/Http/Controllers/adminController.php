@@ -15,7 +15,7 @@ class adminController extends Controller
     }
 
     public function getIndex(){
-        $aAllDatas = picsdata::orderby('created_at','desc')->get();
+        $aAllDatas = picsdata::getAll(7);
         return view('admin.index',compact('aAllDatas'));
     }
     public function create(){
