@@ -110,20 +110,8 @@ $(document).ready(function(){
 
     /*END filter gallery*/
     /*footer*/
-    var hover_bottom=0
-    $(".footer_right_imgs").hover(function(){
-        if(hover_bottom%2==0){
-            $(this).css({
-                "margin-top":"-40px"
-            })
-        }
-        else{
-            $(this).css({
-                "margin-top":"0px"
-            })
-        }
-        hover_bottom++;
-    })
+    
+    
     /*END footer*/
 })
 

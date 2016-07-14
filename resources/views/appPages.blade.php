@@ -14,7 +14,9 @@
     {{--<meta property="og:image"         content="/images/resources/soc_icon_1.png" />--}}
 </head>
 <body>
-
+    <div class="upPush">
+       	<img src="images/resources/up-arrow.png" />
+    </div>
     <section class="headerMenu">
         <nav class="">
             <div class="container-fluid">
@@ -31,7 +33,7 @@
                 <ul class="nav navbar-nav">
                     <li data-name='home' class="active"><a href="/">Домашняя</a></li>
                     <li data-name='about'><a href="#">О наc</a></li>
-                    <li data-name='gallery'><a href="gallery">голлерея</a></li>
+                    <li data-name='gallery'><a href="gallery">галерея</a></li>
                     <li data-name='blog'><a href="#">блог</a></li>
                     <li data-name='contact'><a href="#">контакт</a></li>
                 </ul>
@@ -43,13 +45,23 @@
     <footer class="footer" style="top: 848px;">
         <div class="footer_text">
             <div class="footer_left_section">PEACE  ©  2016 |
-                <a href="#" class="footer_left_a">PRIVACY POLICY</a>
+                <a href="#" class="footer_left_a">All Rights Reserved</a> 
+                <a href="#" class="footer_left_a">Privacy Policy</a> 
+                <a href="#" class="footer_left_a">Contact</a> 
             </div>
             <div class="footer_right_section">
-                <a href="#" class="footer_bottom_a"><img src="/images/resources/soc_icon_1.png" class="footer_right_imgs" style="margin-top: 0px;"></a>
-                <a href="#" class="footer_bottom_a"><img src="/images/resources/soc_icon_2.png" class="footer_right_imgs" style="margin-top: 0px;"></a>
-                <a href="#" class="footer_bottom_a"><img src="/images/resources/soc_icon_3.png" class="footer_right_imgs" style="margin-top: 0px;"></a>
-                <a href="#" class="footer_bottom_a"><img src="/images/resources/soc_icon_4.png" class="footer_right_imgs" style="margin-top: 0px;"></a>
+                <div class='footer_bottom_cont_div'>
+                    <a href="#" class="footer_bottom_a"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+                <div class='footer_bottom_cont_div'>
+                    <a href="#" class="footer_bottom_a"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+                <div class='footer_bottom_cont_div'>    
+                      <a href="#" class="footer_bottom_a"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a>
+                </div>
+                <div class='footer_bottom_cont_div'>
+                    <a href="#" class="footer_bottom_a"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
     </footer>
