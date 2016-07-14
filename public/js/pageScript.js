@@ -4,10 +4,13 @@ $(document).ready(function(){
     /*menu*/
     if(url.split('/')[3].length > 0){
         $(".nav.navbar-nav li").each(function(){
-            if(url.split('/')[3] == $(this).data('name')){
+            $urlsplit = url.split('?');
+            if($urlsplit[0].split('/')[3] == $(this).data('name')){
                 $(".nav.navbar-nav li a").css('background','none');
                 $(".nav.navbar-nav li").removeClass('clickMenuGround');
                 $(this).addClass('clickMenuGround');
+            }else if($urlsplit[0].split('/')[3].length == 0){
+               $(".nav.navbar-nav .active").addClass('clickMenuGround');
             }
         })
     }else{
@@ -92,7 +95,6 @@ $(document).ready(function(){
 
         })
 
-        console.log(data_filter);
         if(data_filter !== null && data_filter.length>0){
             $("#isotop_filters span").each(function(){
                 if($(this).data('filter')==data_filter){
