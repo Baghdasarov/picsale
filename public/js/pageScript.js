@@ -26,15 +26,22 @@ $(document).ready(function(){
     $(document).scroll(function(){
         if($(document).scrollTop() > "200"){
             $('.nav.navbar-nav').addClass('headerMenuPosition');
+            $('.upPush').show();
         }else{
             $('.nav.navbar-nav').removeClass('headerMenuPosition');
+            $('.upPush').hide();
         }
     })
+    $('.upPush').click(function(){
+        $("body").animate({scrollTop:0}, '500');
+    });
     /*end menu*/
     /*slider*/
+
     $(function() {
         $(".rslides").responsiveSlides();
     });
+
     $(".rslides").responsiveSlides({
         auto: true,             // Boolean: Animate automatically, true or false
         speed: 500,            // Integer: Speed of the transition, in milliseconds
