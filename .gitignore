@@ -3,7 +3,7 @@
 /public/storage
 Homestead.yaml
 Homestead.json
-.env
+
 /config
 readme.md
 /public/images/uploads
